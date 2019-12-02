@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:08:26 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/01 18:31:12 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/01 23:35:47 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int					ft_strncmp(char *s1, char *s2, size_t n);
 char				*ft_strnstr(const char *str, const char *to_find,
 					size_t len);
 char				*ft_strrchr(const char *s, int c);
+char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
