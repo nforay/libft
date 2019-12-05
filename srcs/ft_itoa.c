@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 17:41:54 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/05 19:10:49 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/05 19:11:58 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static int	intlen(int n, int len)
 {
-	int	len;
-	
-	len = 0;
 	if (n <= 0)
 	{
 		len++;
@@ -37,7 +34,7 @@ char *ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	len = intlen(n);
+	len = intlen(n, 0);
 	if (!(str = malloc((len + 1))))
 		return (NULL);
 	str[len] = '\0';
