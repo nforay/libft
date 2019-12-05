@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:08:26 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/05 19:37:44 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/05 19:59:42 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, unsigned long n);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putendl_fd(char *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
+void				ft_putstr_fd(char *s, int fd);
 char				**ft_split(char const *s, char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *src);
