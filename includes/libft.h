@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:08:26 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/05 17:42:25 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/05 19:37:44 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dest, char *src, size_t size);
 size_t				ft_strlcpy(char *dest, char *src, size_t size);
 int					ft_strlen(const char *str);
+char 				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(char *s1, char *s2, size_t n);
 char				*ft_strnstr(const char *str, const char *to_find,
 					size_t len);
