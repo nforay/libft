@@ -14,7 +14,7 @@ SRCS	= srcs/ft_atoi.c srcs/ft_isalnum.c srcs/ft_isdigit.c srcs/ft_memchr.c srcs/
 
 SRCS	+= srcs/ft_substr.c srcs/ft_strjoin.c srcs/ft_strtrim.c srcs/ft_split.c srcs/ft_itoa.c srcs/ft_strmapi.c srcs/ft_putchar_fd.c srcs/ft_putstr_fd.c srcs/ft_putendl_fd.c srcs/ft_putnbr_fd.c
 
-SRCSB	= srcs/ft_lstnew.c srcs/ft_lstadd_front.c srcs/ft_lstsize.c srcs/ft_lstlast.c srcs/ft_lstadd_back.c
+SRCSB	= srcs/ft_lstnew.c srcs/ft_lstadd_front.c srcs/ft_lstsize.c srcs/ft_lstlast.c srcs/ft_lstadd_back.c srcs/ft_lstdelone.c
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INC}
@@ -23,8 +23,8 @@ ${NAME}: ${OBJS}
 	ar rc ${NAME} ${OBJS}
 	ranlib ${NAME}
 
-bonus:	${OBJS} ${OBJSB}
-	ar rc ${NAME} ${OBJS} ${OBJSB}
+bonus:	${NAME} ${OBJSB}
+	ar rc ${NAME} ${OBJSB}
 	ranlib ${NAME}
 
 so:
@@ -33,7 +33,7 @@ so:
 all: ${NAME}
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${OBJSB}
 
 fclean: clean
 	rm -f ${NAME}
