@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:08:26 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/06 01:46:09 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/06 01:51:34 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,5 @@ t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **alst, t_list *new);
 int					ft_lstsize(t_list *lst);
 t_list 				*ft_lstlast(t_list *lst);
+void 				ft_lstadd_back(t_list **alst, t_list *new);
 #endif
