@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 19:47:53 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/05 19:50:47 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/05 22:25:21 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while(s[i])
 	{
 		write(fd, &s[i], 1);

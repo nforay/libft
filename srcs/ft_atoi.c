@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:08:42 by nforay            #+#    #+#             */
-/*   Updated: 2019/11/28 15:42:18 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/05 23:22:55 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int	result;
+	size_t	result;
 	int	i;
 	int pos;
 

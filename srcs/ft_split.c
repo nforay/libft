@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:48:11 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/06 03:14:42 by nforay           ###   ########.fr       */
+/*   Updated: 2019/12/10 18:51:09 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,9 @@ char	**ft_split(char const *s, char c)
 			j = i + 1;
 			while (!(ft_strchr(&c, s[j])))
 				j++;
-			if (!(splitted[n++] = ft_substr(s, i, j - i)))
+			if (!(splitted[n] = ft_substr(s, i, j - i)))
 				return (abort_split(splitted, n));
+			n++;
 			i = (j - 1);
 		}
     splitted[n] = NULL;
