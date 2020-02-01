@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 15:12:38 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/06 16:12:42 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/01 16:27:46 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	*lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 	t_list	*ptr;
-	
+
 	if (!*lst || !del)
 		return (NULL);
 	tmp = *lst;
@@ -31,7 +31,7 @@ static void	*lstclear(t_list **lst, void (*del)(void*))
 	return (NULL);
 }
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*child;

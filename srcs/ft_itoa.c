@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 17:41:54 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/05 19:25:32 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/01 16:29:46 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ static int	intlen(int n, int len)
 	while (n)
 	{
 		len++;
-        n /= 10;
+		n /= 10;
 	}
 	return (len);
 }
 
-char *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		len;
 	char	*str;
@@ -39,10 +39,10 @@ char *ft_itoa(int n)
 		return (NULL);
 	str[len] = '\0';
 	if (n < 0)
-    {
+	{
 		str[0] = '-';
 		n = -n;
-    }
+	}
 	while (len--)
 	{
 		if (n <= 9 && n >= 0)

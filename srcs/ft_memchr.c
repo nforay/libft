@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:13:19 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/01 18:41:22 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/01 16:26:23 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (src[i] == (unsigned char) c)
+		if (src[i] == (unsigned char)c)
 			return ((void *)&src[i]);
 		i++;
 	}

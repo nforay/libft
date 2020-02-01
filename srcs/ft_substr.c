@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 17:23:59 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/02 22:47:55 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/01 16:20:17 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s += start;
 	ft_memcpy(ptr, s, len);
 	ptr[len] = '\0';
- 	return (ptr);
+	return (ptr);
 }

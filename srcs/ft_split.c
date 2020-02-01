@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:48:11 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/10 18:51:09 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/01 15:30:47 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ static size_t	splitnbr(const char *str, char c)
 	return (score);
 }
 
-void	*abort_split(char **splitted, size_t n)
+void			*abort_split(char **splitted, size_t n)
 {
-	while(n--)
+	while (n--)
 	{
 		free(splitted[n]);
 		splitted[n] = NULL;
@@ -46,7 +46,7 @@ void	*abort_split(char **splitted, size_t n)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -70,6 +70,6 @@ char	**ft_split(char const *s, char c)
 			n++;
 			i = (j - 1);
 		}
-    splitted[n] = NULL;
-    return (splitted);
+	splitted[n] = NULL;
+	return (splitted);
 }

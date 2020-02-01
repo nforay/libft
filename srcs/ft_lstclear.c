@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 02:16:46 by nforay            #+#    #+#             */
-/*   Updated: 2019/12/06 02:55:50 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/01 16:28:29 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 	t_list	*ptr;
-	
+
 	if (!*lst || !del)
 		return ;
 	tmp = *lst;
