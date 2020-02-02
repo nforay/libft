@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:14:07 by nforay            #+#    #+#             */
-/*   Updated: 2020/02/01 16:21:45 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/02 11:15:30 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ char	*ft_strchr(const char *s, int c)
 		s++;
 	}
 	if (*s == (char)c)
-		return ((char *)&s[ft_strlen(s)]);
+		return ((char *)s);
 	return (NULL);
 }

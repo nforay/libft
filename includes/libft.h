@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:08:26 by nforay            #+#    #+#             */
-/*   Updated: 2020/02/01 16:53:17 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/02 14:41:53 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ char				*ft_strdup(const char *src);
 char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 size_t				ft_strlcpy(char *dest, const char *src, size_t size);
-int					ft_strlen(const char *str);
-char 				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+size_t				ft_strlen(const char *str);
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *str, const char *to_find,
 					size_t len);
@@ -60,11 +60,11 @@ int					ft_toupper(int c);
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **alst, t_list *new);
 int					ft_lstsize(t_list *lst);
-t_list 				*ft_lstlast(t_list *lst);
-void 				ft_lstadd_back(t_list **alst, t_list *new);
+t_list				*ft_lstlast(t_list *lst);
+void				ft_lstadd_back(t_list **alst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list 				*ft_lstmap(t_list *lst, void *(*f)(void *),
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 #endif

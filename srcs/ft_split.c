@@ -6,13 +6,13 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:48:11 by nforay            #+#    #+#             */
-/*   Updated: 2020/02/01 15:30:47 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/02 11:03:01 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	splitnbr(const char *str, char c)
+static size_t		splitnbr(const char *str, char c)
 {
 	size_t	i;
 	size_t	score;
@@ -34,7 +34,7 @@ static size_t	splitnbr(const char *str, char c)
 	return (score);
 }
 
-void			*abort_split(char **splitted, size_t n)
+static void			*abort_split(char **splitted, size_t n)
 {
 	while (n--)
 	{
@@ -46,7 +46,7 @@ void			*abort_split(char **splitted, size_t n)
 	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
