@@ -6,7 +6,7 @@
 /*   By: nforay <nforay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:48:11 by nforay            #+#    #+#             */
-/*   Updated: 2020/02/02 11:03:01 by nforay           ###   ########.fr       */
+/*   Updated: 2020/02/23 16:33:21 by nforay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,23 @@ static size_t		splitnbr(const char *str, char c)
 	size_t	score;
 	size_t	j;
 
-	i = -1;
+	i = 0;
 	score = 0;
-	while (str[++i])
+	while (str[i])
 	{
-		if (ft_strchr(&c, str[i]))
+		if (c == str[i])
+		{
+			i++;
 			continue ;
+		}
 		j = i + 1;
-		while (!(ft_strchr(&c, str[j])) && str[j])
+		while ((c != str[j]) && str[j])
 			j++;
 		score++;
-		if (str[(i = j)] == '\0')
+		i = j;
+		if (str[i] == '\0')
 			return (score);
+		i++;
 	}
 	return (score);
 }
@@ -58,18 +63,19 @@ char				**ft_split(char const *s, char c)
 	if (!(splitted = ft_calloc(splitnbr(s, c) + 1, sizeof(splitted))))
 		return (NULL);
 	n = 0;
-	i = -1;
-	while (s[++i])
-		if (!(ft_strchr(&c, s[i])))
+	i = 0;
+	while (s[i] && (splitnbr(s, c) > 0))
+		if (c != s[i])
 		{
 			j = i + 1;
-			while (!(ft_strchr(&c, s[j])))
+			while (c != s[j] && s[j])
 				j++;
-			if (!(splitted[n] = ft_substr(s, i, j - i)))
-				return (abort_split(splitted, n));
-			n++;
-			i = (j - 1);
+			if (!(splitted[n++] = ft_substr(s, i, j - i)))
+				return (abort_split(splitted, n - 1));
+			i = j;
 		}
+		else
+			i++;
 	splitted[n] = NULL;
 	return (splitted);
 }
